@@ -13,6 +13,9 @@ import { UserSignInComponent } from './user-sign-in/user-sign-in.component';
 import { CreateAdvertisementComponent } from './create-advertisement/create-advertisement.component';
 import { MailSenderComponent } from './mail-sender/mail-sender.component';
 import { AdvertisementBoardComponent } from './advertisement-board/advertisement-board.component';
+import { AdvertisementDetailsComponent } from './advertisement-details/advertisement-details.component';
+import { ComapnyDetalisComponent } from './comapny-detalis/comapny-detalis.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { AdvertisementBoardComponent } from './advertisement-board/advertisement
     UserSignInComponent,
     CreateAdvertisementComponent,
     MailSenderComponent,
-    AdvertisementBoardComponent
+    AdvertisementBoardComponent,
+    AdvertisementDetailsComponent,
+    ComapnyDetalisComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
