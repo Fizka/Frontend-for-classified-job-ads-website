@@ -1,0 +1,36 @@
+<h3>Find me baby! </h3>
+
+<div style="width: 300px;">
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="type">Type</label>
+      <input type="text" class="form-control" id="type" required [(ngModel)]="usertype" name="type">
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+
+  <div [hidden]="submitted">
+    <ul>
+      <h5> Konta Premium </h5>
+        <li *ngFor="let user of user2">
+          <h4>{{user.idUser}} - {{user.login}} {{user.mail}} </h4>
+        </li>
+    </ul>
+  </div>
+
+  <div [hidden]="!submitted" >
+    <ul>
+      <h5> Konta premium - wyszukiwanie </h5>
+        <li *ngFor="let user of user">
+          <h4>{{user.idUser}} - {{user.login}} {{user.mail}} </h4>
+        </li>
+    </ul>
+  </div>
+
+</div>
+
+
