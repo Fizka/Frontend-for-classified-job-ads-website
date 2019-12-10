@@ -1,1 +1,9 @@
-<p>advertisement-board works!</p>
+<h3>Ogłoszenia</h3>
+<h3></h3>
+<div *ngFor="let advertisement of advertisement | async" style="width: 400px;">
+  <app-advertisement-details [advertisement]='advertisement'></app-advertisement-details>
+</div>
+<h3></h3>
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteAdvertisements()'>Usuń ogłoszenia</button>
+</div>

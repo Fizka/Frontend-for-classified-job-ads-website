@@ -1,1 +1,77 @@
-<p>create-advertisement works!</p>
+<h3> Dodaj ogłoszenie </h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+<ul>
+  <li>
+    <div>
+      <div class="form-group">
+        <label for="title">Tytuł: </label>
+        <input type="text" class="form-control" id="title" required [(ngModel)]="advertisement.title" name="title">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="form-group">
+        <label for="industry">Branża: </label>
+        <input type="text" class="form-control" id="industry" required [(ngModel)]="advertisement.industry" name="industry">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="form-group">
+        <label for="city">Miasto: </label>
+        <input type="text" class="form-control" id="city" required [(ngModel)]="advertisement.city" name="city">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="form-group">
+        <label for="salary">Pensja: </label>
+        <input type="text" class="form-control" id="salary" required [(ngModel)]="advertisement.salary" name="salary">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="form-group">
+        <label for="company">Firma: </label>
+        <input type="text" class="form-control" id="company" required [(ngModel)]="advertisement.company" name="company">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="form-group">
+        <label for="dateAdded">Dodano: </label>
+        <input type="text" class="form-control" id="dateAdded" required [(ngModel)]="advertisement.dateAdded" name="dateAdded">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="form-group">
+        <label for="periodOfValidity">Data wygaśnięcia: </label>
+        <input type="text" class="form-control" id="periodOfValidity" required [(ngModel)]="advertisement.periodOfValidity" name="periodOfValidity">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="form-group">
+        <label for="contractType">Typ umowy: </label>
+        <input type="text" class="form-control" id="contractType" required [(ngModel)]="advertisement.contractType" name="contractType">
+      </div>
+    </div>
+  </li>
+  <button type="submit" class="btn btn-success">Zatwierdź</button>
+</ul>
+  </form>
+  </div>
+
+<div [hidden]="!submitted">
+  <h4>Dodawanie zakończone pomyślnie!</h4>
+  <button class="btn btn-success" (click)="newAdvertisement()">Dodaj</button>
+</div>

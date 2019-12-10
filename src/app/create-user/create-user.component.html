@@ -1,4 +1,4 @@
-<h3>Create User</h3>
+<h3>Dodaj użytkownika</h3>
 <div [hidden]="submitted" style="width: 300px;">
   <form (ngSubmit)="onSubmit()">
     <h3></h3>
@@ -9,21 +9,21 @@
     </div>
     <h3></h3>
     <div class="form-group">
-      <label for="mail">Mail</label>
+      <label for="mail">E-mail</label>
       <h3></h3>
       <input type="text" class="form-control" id="mail" required [(ngModel)]="user.mail" name="mail">
     </div>
 <h3></h3>
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password">Hasło</label>
       <h3></h3>
       <input type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success">Zatwierdź</button>
   </form>
 </div>
 
 <div [hidden]="!submitted">
-  <h4>You submitted successfully!</h4>
-  <button class="btn btn-success" (click)="newUser()">Add</button>
+  <h4>Zarejestrowałeś się!</h4>
+  <button class="btn btn-success" (click)="newUser()">Stwórz użytkownika</button>
 </div>

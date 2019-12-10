@@ -1,1 +1,36 @@
-<p>advertisement-details works!</p>
+<h3> Ogłoszenie </h3>
+<div *ngIf="advertisement">
+  <div>
+    <div>
+      <label>Tytuł : </label> {{advertisement.title}}
+
+    </div>
+    <div>
+      <label>Branża : </label> {{advertisement.industry}}
+
+    </div>
+    <div>
+      <label>Miasto : </label> {{advertisement.city}}
+
+    </div>
+    <div>
+      <label>Pensja : </label> {{advertisement.salary}}
+    </div>
+    <div>
+      <label>Firma : </label> {{advertisement.company}}
+    </div>
+
+    <div>
+      <label>Dodano : </label> {{advertisement.dateAdded}}
+    </div>
+
+    <div>
+      <label>Data wygaśnięcia : </label> {{advertisement.periodOfValidity}}
+    </div>
+
+    <div>
+      <label>Typ umowy : </label> {{advertisement.contractType}}
+    </div>
+
+  </div>
+</div>

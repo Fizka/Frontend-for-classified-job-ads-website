@@ -2,9 +2,9 @@
   margin: 1%;
 }
 li{
-  display: inline;
-  padding: 0.5em;
-}
+   display: inline;
+   padding: 0.5em;
+ }
 #nav{
   background-color: darkgrey;
   padding: 0.5em 0;
