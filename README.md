@@ -1,6 +1,6 @@
 # Modules for classified job ads website 
 
-(./ogłoszenia.png)
+![](/ogłoszenia.png)
 
 ##Accounts
 
@@ -8,49 +8,49 @@
 
 ####For Everyone(basic account)
  
-(./Rejestracja.png)
+![](/Rejestracja.png)
 
-(./porejestracjipodstawowej.png)
+![](/porejestracjipodstawowej.png)
 
 ####For Company 
 
-(./tworzeniekontafirmy.png)
+![](/tworzeniekontafirmy.png)
 
-(./kontofirmy.png)
+![](/kontofirmy.png)
 
 ####For Customer 
 
-(./tworzeniekontaklienta.png)
+![](/tworzeniekontaklienta.png)
 
-(./kontoklienta.png)
+![](/kontoklienta.png)
 
 ###How to log in?
 
-(./logowanie.png)
+![](/logowanie.png)
 
 ##Job ads 
 
-(./ogłoszenia.png)
+![](/ogłoszenia.png)
 
 ##CV ads  
 
-(./cv.png)
+![](/cv.png)
 
 ##How to create CV? 
 
-(./TworzenieCV.png)
+![](/TworzenieCV.png)
 
 ##How to create Job Ads? 
 
-(./tworzenieOgłoszenia.png)
+![](/tworzenieOgłoszenia.png)
 
 ##Messages
 
-(./wiadomosci.png) 
+![](/wiadomosci.png) 
 
 ##Admin account 
 
-(./admin.png)
+![](/admin.png)
 
 # SzukajPracyNgApp
 
