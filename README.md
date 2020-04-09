@@ -2,53 +2,53 @@
 
 ![](/ogłoszenia.png)
 
-##Accounts
+## Accounts
 
-###How to create an Account? 
+### How to create an Account? 
 
-####For Everyone(basic account)
+#### For Everyone(basic account)
  
 ![](/Rejestracja.png)
 
 ![](/porejestracjipodstawowej.png)
 
-####For Company 
+#### For Company 
 
 ![](/tworzeniekontafirmy.png)
 
 ![](/kontofirmy.png)
 
-####For Customer 
+#### For Customer 
 
 ![](/tworzeniekontaklienta.png)
 
 ![](/kontoklienta.png)
 
-###How to log in?
+### How to log in?
 
 ![](/logowanie.png)
 
-##Job ads 
+## Job ads 
 
 ![](/ogłoszenia.png)
 
-##CV ads  
+## CV ads  
 
 ![](/cv.png)
 
-##How to create CV? 
+## How to create CV? 
 
 ![](/TworzenieCV.png)
 
-##How to create Job Ads? 
+## How to create Job Ads? 
 
 ![](/tworzenieOgłoszenia.png)
 
-##Messages
+## Messages
 
 ![](/wiadomosci.png) 
 
-##Admin account 
+## Admin account 
 
 ![](/admin.png)
 
