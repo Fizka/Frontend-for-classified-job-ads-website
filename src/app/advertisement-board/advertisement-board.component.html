@@ -1,9 +1,55 @@
-<h3>Ogłoszenia</h3>
-<h3></h3>
-<div *ngFor="let advertisement of advertisement | async" style="width: 400px;">
-  <app-advertisement-details [advertisement]='advertisement'></app-advertisement-details>
+<div class="jumbotron no-gutters" >
+  <div class="container-fluid">
+    <div class="form-horizontal">
+    <div class="row">
+      <div class="col-md-9 text-center">
+        <h3>Ogłoszenia</h3>
+        <div class="col-md-offset-3 text-center">
+        </div>
+          <div  style="padding-left: 100px; padding-right: 100px;">
+          <h5> Wyszukiwanie </h5>
+              <div class="form-group" >
+                <label >Branża:  </label>
+                <br>
+                <div class="btn-group" >
+                  <div class="row no-gutters text-center">
+                <button type="submit" class="btn btn-primary" id="budo"  (click)="IndustryBudownictwo()" name="budo"> Budownictwo </button>
+                <button type="submit" class="btn btn-primary" id="iy"  (click)="IndustryIT()" name="iy"> IT </button>
+                <button type="submit" class="btn btn-primary" id="prawo"  (click)="IndustryPrawo()" name="prawo"> Prawo </button>
+                <button type="submit" class="btn btn-primary" id="fina"  (click)="IndustryFinanse()" name="fina"> Finanse </button>
+                </div>
+                </div>
+              </div>
+
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group" style="left: 50%; right: 50%;">
+                <label for="salary"> Pensja od:  </label>
+                <input  type="text" name="salary" id="salary" class="form-control"  required [(ngModel)]="salary">
+              <label for="city"> Miasto:  </label>
+              <input  type="text" name="city" id="city" class="form-control"  required [(ngModel)]="city">
+              </div>
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary"> Szukaj </button>
+              </div>
+              <br>
+            </form>
+
+          </div>
+
+        <nav class="navbar navbar-light" style="background-color: #333; padding-right:50px; ">
+          <div  class="row row-no-gutters text-center" *ngFor="let advertisement of adverts5">
+            <ul> <li><app-advertisement-details [advertisement]='advertisement'></app-advertisement-details> </li> </ul>
+          </div>
+
+        </nav>
+      </div>
+      <div class="jumbotron" >
+          <div class="col-md-3">
+            <br>
+            <img  src="assets/businessman.png" class="img" width="172" height="172">
+          </div>
+        </div>
+    </div>
 </div>
-<h3></h3>
-<div>
-  <button type="button" class="button btn-danger" (click)='deleteAdvertisements()'>Usuń ogłoszenia</button>
+  </div>
 </div>

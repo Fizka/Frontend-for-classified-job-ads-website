@@ -1,1 +1,164 @@
-<p>comapny-detalis works!</p>
+<div class="jumbotron no-gutters" >
+  <div class="container-fluid">
+    <div class="form-horizontal">
+      <div class="row">
+        <div class="col-md-8 text-center">
+    <h2> Konto Użytkownika - Firma</h2>
+    <div *ngIf="user">
+      <h3> Dane Konta </h3>
+      <div>
+        <ul>
+          <li>
+            <div>
+              <label>Login : </label> {{user.login}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="login" required [(ngModel)]="user.login" name="login">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Hasło : </label> {{user.password}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>E-mail : </label> {{user.mail}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="mail" required [(ngModel)]="user.mail" name="mail">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Aktywny : </label> {{user.active}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Typ użytkownika : </label> {{user.usertype}}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div *ngIf="company">
+      <h3> Dane Firmy </h3>
+  <div>
+    <ul>
+      <li>
+        <div>
+          <label> NIP : </label> {{company.nip}}
+        </div>
+      </li>
+      <li>
+        <div>
+          <label>Nazwa : </label> {{company.companyName}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>Szczególy adresu : </label> {{company.address}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>Miasto : </label> {{company.city}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>Kod Pocztowy : </label> {{company.postalcode}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>mail : </label> {{company.mail}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>REGON : </label> {{company.REGON}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>KRS : </label> {{company.KRS}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <div *ngIf="advertisement">
+      <h3> Ogłoszenie </h3>
+      <div>
+        <ul>
+          <li>
+            <div>
+              <label>Tytuł : </label> {{advertisement.title}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Branża : </label> {{advertisement.industry}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Miasto : </label> {{advertisement.city}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Pensja : </label> {{advertisement.salary}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Firma : </label> {{advertisement.company}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Dodano : </label> {{advertisement.dateAdded}}
+            </div>
+          <li>
+          </li>
+          <div>
+            <label>Data wygaśnięcia : </label> {{advertisement.periodOfValidity}}
+          </div>
+          <li>
+          </li>
+          <div>
+            <label>Typ umowy : </label> {{advertisement.contractType}}
+          </div>
+        </ul>
+      </div>
+    </div>
+          <h3> Odpowiedzi na zgłoszenia </h3>
+          <div *ngFor="let application of application">
+            <ul>
+              <li>
+                <div>
+                  <div class="form-group">
+                    <label >Dane: </label>{{application.address}}
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <div class="form-group">
+                    <label >Mail: </label>{{application.mail}}
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="form-group">
+            <button type="update" class="btn btn-primary"  *ngIf="!submitted" (click)='OnSubmit()'> Pokaz Ogłoszenie i zgłoszenia </button>
+          </div>
+    <button class="btn btn-primary" (click)="DodajOgloszenie()"  > Dodaj Ogłoszenie  </button>
+</div>
+</div>
+    </div>
+  </div>
+</div>

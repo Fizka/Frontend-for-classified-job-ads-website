@@ -1,36 +1,55 @@
-<h3> Ogłoszenie </h3>
-<div *ngIf="advertisement">
+
+<div class="container">
+  <div class="row  row-no-gutters">
+    <div style="border:4px solid white;">
+      <div class="card border-primary mb-3 " style="max-width: 50rem; min-width: 400px;">
+        <div *ngIf="advertisement">
+        <div class="card-header"> {{advertisement.title}}</div>
+        <div class="card-body text-center">
   <div>
-    <div>
-      <label>Tytuł : </label> {{advertisement.title}}
-
+    <ul>
+    <li>
+      <div>
+        <label>Branża : </label> {{advertisement.industry}}
+      </div>
+    </li>
+      <li>
+        <div>
+          <label>Miasto : </label> {{advertisement.city}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>Pensja : </label> {{advertisement.salary}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>Firma : </label> {{advertisement.company}}
+        </div>
+    </li>
+      <li>
+        <div>
+          <label>Dodano : </label> {{advertisement.dateAdded}}
+        </div>
+      <li>
+    </li>
+        <div>
+          <label>Data wygaśnięcia : </label> {{advertisement.periodOfValidity}}
+        </div>
+      <li>
+    </li>
+        <div>
+          <label>Typ umowy : </label> {{advertisement.contractType}}
+        </div>
+    </ul>
+  </div>
+</div>
+<div>
+  <button type="button" class="btn btn-primary" (click)='newApplication()'> Odpowiedz na zgłoszenie </button>
+</div>
+</div>
+</div>
     </div>
-    <div>
-      <label>Branża : </label> {{advertisement.industry}}
-
-    </div>
-    <div>
-      <label>Miasto : </label> {{advertisement.city}}
-
-    </div>
-    <div>
-      <label>Pensja : </label> {{advertisement.salary}}
-    </div>
-    <div>
-      <label>Firma : </label> {{advertisement.company}}
-    </div>
-
-    <div>
-      <label>Dodano : </label> {{advertisement.dateAdded}}
-    </div>
-
-    <div>
-      <label>Data wygaśnięcia : </label> {{advertisement.periodOfValidity}}
-    </div>
-
-    <div>
-      <label>Typ umowy : </label> {{advertisement.contractType}}
-    </div>
-
   </div>
 </div>

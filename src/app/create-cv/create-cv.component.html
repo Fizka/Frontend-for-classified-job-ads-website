@@ -1,0 +1,102 @@
+<div class="jumbotron no-gutters" >
+  <div class="container-fluid">
+    <div class="form-horizontal">
+      <div class="row">
+        <div class="col-md-8 text-center" >
+
+<h3> Tworzenie CV </h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <ul>
+      <div *ngIf="employee">
+        <div>
+          <li>
+          <div>
+            <label>Imię : </label> {{employee.firstName}}
+          </div>
+          </li>
+          <li>
+          <div>
+            <label>Naziwsko : </label> {{employee.lastName}}
+          </div>
+          </li>
+          <li>
+          <div>
+            <label>Adres : </label> {{employee.address}}
+          </div>
+          </li>
+          <li>
+            <div>
+              <label>Numer : </label> {{employee.phonenumber}}
+            </div>
+          </li>
+        </div>
+      </div>
+      <li>
+        <div>
+          <div class="md-form">
+            <label for="dane">Dane:</label>
+            <i class="purple-border .form-control:focus"></i>
+            <textarea type="text" class="form-control" id="dane" required [(ngModel)]="cv.dane" rows="8" name="dane"></textarea>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="md-form">
+            <label for="education">Edukacja:</label>
+            <i class="purple-border .form-control:focus"></i>
+            <textarea type="text" class="form-control" id="education" required [(ngModel)]="cv.education" rows="8" name="education"></textarea>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="md-form">
+          <label for="hobbies">Zainteresowania: </label>
+            <i class="purple-border .form-control:focus"></i>
+            <textarea type="text" class="form-control" id="hobbies" required [(ngModel)]="cv.hobbies" rows="8" name="hobbies"></textarea>
+             </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="md-form">
+          <label for="skills">Umiejętności: </label>
+            <i class="purple-border .form-control:focus"cols="55" ></i>
+            <textarea type="text" class="form-control" id="skills" required [(ngModel)]="cv.skills" rows="8" name="skills"> </textarea>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="md-form">
+          <label for="workExperience">Doświadczenie: </label>
+            <i class="purple-border .form-control:focus"></i>
+            <textarea type="text" cols="55" rows="10" class="form-control" id="workExperience" required [(ngModel)]="cv.workExperience" rows="8" name="workExperience"> </textarea>
+          </div>
+             </div>
+      </li>
+      <li>
+      <button type="submit" class="btn btn-primary">Zatwierdź</button>
+      </li>
+    </ul>
+  </form>
+</div>
+<div [hidden]="!submitted">
+  <h4> Dodawanie CV zakończone pomyślnie! </h4>
+  <div clas="form-group">
+  <button class="btn btn-primary" (click)="GoTo()" > Konto </button>
+  </div>
+  </div>
+        </div>
+      <div class="jumbotron" >
+        <div class="col-md-2">
+          <br>
+          <img src="assets/businessman.png" class="img" width="172" height="172">
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

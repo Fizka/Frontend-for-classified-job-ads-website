@@ -23,6 +23,7 @@ export class SearchUserComponent implements OnInit {
     this.premiumUsers();
   }
 
+  //wyszukanie uzytkownikow
   private searchUsers() {
     this.user = [];
     this.dataService.getUserByusertype(this.usertype)
@@ -30,6 +31,7 @@ export class SearchUserComponent implements OnInit {
     this.submitted = true;
   }
 
+  //premium
   private premiumUsers() {
     this.user2 = [];
     this.dataService.getUserByusertype(1)

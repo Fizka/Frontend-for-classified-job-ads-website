@@ -1,0 +1,15 @@
+<div class="jumbotron no-gutters" >
+  <div class="container-fluid">
+    <div class="form-horizontal">
+      <div class="row">
+        <div class="col-md-8 text-center">
+<p>Tak powinna wygladać skrzynka!</p>
+              <div class="row" *ngFor="let message of message | async" style="width: 300px;">
+                <app-message [message]='message'></app-message>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+

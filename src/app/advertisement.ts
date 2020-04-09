@@ -1,3 +1,7 @@
+import {Survey} from "./Model/survey/survey";
+import {Company} from "./Model/Account/company";
+import {Search} from "./Model/advertisement/search";
+
 export class Advertisement {
   idAdvertisement: number;
   title: string;
@@ -8,4 +12,6 @@ export class Advertisement {
   dateAdded : string;
   periodOfValidity : string;
   contractType : string;
+  contents : string;
+  companyAdvertisement : Company;
 }

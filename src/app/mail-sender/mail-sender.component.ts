@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Message} from "../message";
-import {MessageService} from "../message.service";
+import {Message} from "../Model/chat/message";
+import {MessageService} from "../Model/chat/message.service";
+import {MessService} from "./mess.service";
+import {mess} from "./mess";
 
 
 @Component({
@@ -10,33 +12,35 @@ import {MessageService} from "../message.service";
 })
 export class MailSenderComponent implements OnInit {
 
+  me : mess;
   submitted = false;
   message: Message = new Message();
 
-  constructor(private dataService: MessageService) { }
+  constructor(private dataService: MessageService, private  messService : MessService) { }
 
   ngOnInit() {
+
   }
 
+  //czyszczenie
   newMessage(): void {
     this.submitted = false;
-    this.message = new Message();
+    this.me = new mess();
   }
 
+  //wyslanie wiadmosci
   sendFeedback(): void {
-    this.dataService.postFeedback(this.message)
+    this.messService.sendMessage(this.me)
       .subscribe(
       data => {
         console.log(data);
-        this.submitted = true;
-      },
-      err => {
-        alert("An error has occurred while sending mail - Hej you!");
       }
     );
-    this.message = new Message();
+    this.submitted = true;
+    this.me = new mess();
   }
 
+  //zapis
   onSubmit() {
     this.sendFeedback();
   }

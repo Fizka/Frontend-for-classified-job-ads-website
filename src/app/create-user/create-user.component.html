@@ -1,29 +1,45 @@
+<div class="jumbotron no-gutters" >
+  <div class="container-fluid">
+    <div class="form-horizontal">
+      <div class="row">
+        <div class="col-md-8 text-center">
 <h3>Dodaj użytkownika</h3>
-<div [hidden]="submitted" style="width: 300px;">
+<div [hidden]="submitted" >
   <form (ngSubmit)="onSubmit()">
-    <h3></h3>
-    <div class="form-group">
-      <label for="login">Login</label>
-      <h3></h3>
-      <input type="text" class="form-control" id="login" required [(ngModel)]="user.login" name="login">
-    </div>
-    <h3></h3>
-    <div class="form-group">
-      <label for="mail">E-mail</label>
-      <h3></h3>
-      <input type="text" class="form-control" id="mail" required [(ngModel)]="user.mail" name="mail">
-    </div>
-<h3></h3>
-    <div class="form-group">
-      <label for="password">Hasło</label>
-      <h3></h3>
-      <input type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
-    </div>
-    <button type="submit" class="btn btn-success">Zatwierdź</button>
+    <ul>
+        <li>
+          <div class="form-group">
+            <label for="login">Login </label>
+            <input type="text" class="form-control" id="login" required [(ngModel)]="user.login" name="login">
+          </div>
+        </li>
+      <li>
+        <div class="form-group">
+          <label for="mail">E-mail</label>
+          <input type="text" class="form-control" id="mail" required [(ngModel)]="user.mail" name="mail">
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <label for="password">Hasło</label>
+          <input type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+        </div>
+      </li>
+      <li>
+        <div>
+        <button type="submit" class="btn btn-success"> Zatwierdź </button>
+        </div>
+      </li>
+    </ul>
   </form>
 </div>
-
 <div [hidden]="!submitted">
-  <h4>Zarejestrowałeś się!</h4>
-  <button class="btn btn-success" (click)="newUser()">Stwórz użytkownika</button>
+  <h4>Wybierz rodzaj konta: </h4>
+  <button class="btn btn-primary" (click)="kontoFirma()"> Konto dla Firm </button>
+  <button class="btn btn-primary" (click)="kontoKlient()"> Konto dla Klienta  </button>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
 </div>

@@ -16,6 +16,14 @@ export class UserService {
       return this.http.get(`${this.baseUrl}/${idUser}`);
   }
 
+  getUserbylogin(login : string) : Observable<any>{
+    return this.http.get(`${this.baseUrl}/login/${login}`);
+  }
+
+  getUserByusertype(usertype : number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/usertype/${usertype}`);
+  }
+
     createUser(user: any): Observable<any> {
       return this.http.post(this.baseUrl, user);
   }
@@ -34,9 +42,7 @@ export class UserService {
       return this.http.get(this.baseUrl);
   }
 
-    getUserByusertype(usertype : number): Observable<any> {
-      return this.http.get(`${this.baseUrl}/usertype/${usertype}`);
-  }
+
 
     deleteAll(): Observable<any> {
       return this.http.delete(this.baseUrl);

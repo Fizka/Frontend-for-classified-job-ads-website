@@ -66,7 +66,6 @@ export class UserDetailsComponent implements OnInit {
           this.user = data as User;
         },
         error => console.log(error));
-
     this.submitted = false;
   }
 
@@ -83,18 +82,6 @@ export class UserDetailsComponent implements OnInit {
     this.submitted = false;
   }
 
-  updateUsermail( value : string) {
-    this.userService.updateUser(this.user.idUser,
-      { login: this.user.login, password: this.user.password, mail : value, usertype : this.user.usertype, active : this.user.active})
-      .subscribe(
-        data => {
-          console.log(data);
-          this.user = data as User;
-        },
-        error => console.log(error));
-
-    this.submitted = false;
-  }
 
   deleteUser() {
     this.userService.deleteUser(this.user.idUser)

@@ -1,3 +1,57 @@
+# Modules for classified job ads website 
+
+(./ogłoszenia.png)
+
+##Accounts
+
+###How to create an Account? 
+
+####For Everyone(basic account)
+ 
+(./Rejestracja.png)
+
+(./porejestracjipodstawowej.png)
+
+####For Company 
+
+(./tworzeniekontafirmy.png)
+
+(./kontofirmy.png)
+
+####For Customer 
+
+(./tworzeniekontaklienta.png)
+
+(./kontoklienta.png)
+
+###How to log in?
+
+(./logowanie.png)
+
+##Job ads 
+
+(./ogłoszenia.png)
+
+##CV ads  
+
+(./cv.png)
+
+##How to create CV? 
+
+(./TworzenieCV.png)
+
+##How to create Job Ads? 
+
+(./tworzenieOgłoszenia.png)
+
+##Messages
+
+(./wiadomosci.png) 
+
+##Admin account 
+
+(./admin.png)
+
 # SzukajPracyNgApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.

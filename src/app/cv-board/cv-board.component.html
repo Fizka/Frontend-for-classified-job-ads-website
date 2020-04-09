@@ -1,0 +1,28 @@
+<div class="jumbotron no-gutters" >
+  <div class="container-fluid">
+    <div class="form-horizontal">
+      <div class="row">
+        <div class="col-md-8 text-center">
+          <h3>Tablica CV</h3>
+          <nav class="navbar navbar-light" style="background-color: #333; padding-right:50px; ">
+            <div class="row" *ngFor="let cv, of cvs | async" >
+              <ul>
+                <li>
+  <app-cv-detalis [cv]='cv'></app-cv-detalis>
+                </li>
+              </ul>
+</div>
+          </nav>
+        </div>
+          <div class="jumbotron" >
+            <div class="col-md-3">
+              <br>
+              <img src="assets/businessman.png" class="img" width="172" height="172">
+            </div>
+          </div>
+</div>
+    </div>
+  </div>
+</div>
+
+

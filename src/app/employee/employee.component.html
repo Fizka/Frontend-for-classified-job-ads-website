@@ -1,1 +1,171 @@
-<p>employee works!</p>
+<div class="jumbotron no-gutters" >
+  <div class="container-fluid">
+    <div class="form-horizontal">
+      <div class="row">
+        <div class="col-md-8 text-center">
+
+
+    <h2> Konto Użytkownika </h2>
+    <div *ngIf="user">
+      <h3> Dane Konta </h3>
+      <div>
+        <ul>
+          <li>
+            <div>
+              <label>Login : </label> {{user.login}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="login" required [(ngModel)]="user.login" name="login">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Hasło : </label> {{user.password}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>E-mail : </label> {{user.mail}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="mail" required [(ngModel)]="user.mail" name="mail">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Aktywny : </label> {{user.active}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Typ użytkownika : </label> {{user.usertype}}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="empolyee">
+      <h3> Dane Osobiste </h3>
+      <div>
+        <ul>
+          <li>
+            <div>
+              <label>Imię : </label> {{empolyee.firstName}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="firstName" required [(ngModel)]="empolyee.firstName" name="firstName">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Naziwsko : </label> {{empolyee.lastName}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="lastName" required [(ngModel)]="empolyee.lastName" name="lastName">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Adres : </label> {{empolyee.address}}
+              <input [hidden]="!submitted" type="text" class="form-control" id="address" required [(ngModel)]="empolyee.address" name="address">
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>PESEL : </label> {{empolyee.pesel}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Kursy : </label> {{empolyee.course}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Numer Telefonu : </label> {{empolyee.phonenumber}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>Certyfikaty : </label> {{empolyee.certificate}}
+            </div>
+          </li>
+          <li>
+            <div>
+              <label>CV: </label> {{empolyee.cv}}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h3> Twoje CV </h3>
+    <div *ngIf="cv">
+      <ul>
+        <li>
+          <div>
+            <div class="form-group">
+              <label >Edukacja: </label>{{cv.dane}}
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="form-group">
+              <label >Edukacja: </label>{{cv.education}}
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="form-group">
+              <label >Zainteresowania: </label>{{cv.hobbies}}
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="form-group">
+              <label >Umiejętności: </label>{{cv.skills}}
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="form-group">
+              <label >Doświadczenie: </label>{{cv.workExperience}}
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+          <h3> Twoje zgłoszenia </h3>
+          <div *ngFor="let application of application">
+            <ul>
+              <li>
+                <div>
+                  <div class="form-group">
+                    <label >Firma: </label>{{application.firstName}}
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <div class="form-group">
+                    <label >Tytuł: </label>{{application.lastName}}
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+    <div class="form-group">
+      <button type="update" class="btn btn-primary"  *ngIf="!submitted" (click)='OnSubmit()'> Pokaz CV i zgłoszenia </button>
+      <button type="confirm" class="btn btn-primary"  *ngIf="submitted" (click)='OffSubmit()'> Zatwierdz </button>
+    </div>
+  </div>
+
+
+      <div class="jumbotron" >
+      <div class="col-md-2">
+        <br>
+        <img src="assets/businessman.png" class="img" width="172" height="172">
+      </div>
+
+
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
