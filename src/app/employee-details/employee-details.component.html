@@ -1,71 +1,47 @@
-<div class="jumbotron no-gutters" >
-  <div class="container-fluid">
-    <div class="form-horizontal">
-      <div class="row">
-        <div class="col-md-8 text-center">
+<div id="tresc">
+  <div class="dane">
 <div *ngIf="empolyee">
   <div>
-    <ul>
-      <li>
-        <div>
+
           <label>Imię : </label> {{empolyee.firstName}}
           <input [hidden]="!submitted" type="text" class="form-control" id="login" required [(ngModel)]="empolyee.firstName" name="login">
         </div>
-      </li>
-      <li>
+
           <div>
             <label>Naziwsko : </label> {{empolyee.lastName}}
             <input [hidden]="!submitted" type="text" class="form-control" id="password" required [(ngModel)]="empolyee.lastName" name="password">
           </div>
-      </li>
-      <li>
+
         <div>
           <label>Adres : </label> {{empolyee.address}}
           <input [hidden]="!submitted" type="text" class="form-control" id="mail" required [(ngModel)]="empolyee.address" name="mail">
         </div>
-      </li>
-      <li>
+
         <div>
           <label>PESEL : </label> {{empolyee.pesel}}
         </div>
-      </li>
-      <li>
+
           <div>
           <label>Kursy : </label> {{empolyee.course}}
         </div>
-      </li>
-      <li>
+
         <div>
           <label>Numer Telefonu : </label> {{empolyee.phonenumber}}
         </div>
-      </li>
-      <li>
+
         <div>
           <label>Certyfikaty : </label> {{empolyee.certificate}}
         </div>
-      </li>
-      <li>
+
         <div>
           <label>CV: </label> {{empolyee.cv}}
         </div>
-      </li>
-      <li>
+
         <div>
-          <ul>
-            <li>
               <button type="update" class="btn btn-primary"  *ngIf="!submitted" (click)='OnSubmit()'>Aktualizuj dane</button>
-            </li>
-            <li>
               <button type="confirm" class="btn btn-primary"  *ngIf="submitted" (click)='OffSubmit()'>Zatwierdz</button>
-            </li>
-          </ul>
         </div>
-      </li>
-    </ul>
   </div>
 </div>
   </div>
-</div>
-    </div>
-  </div>
-</div>
+

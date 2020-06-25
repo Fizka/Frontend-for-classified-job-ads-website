@@ -22,6 +22,8 @@ export class EmployeeComponent implements OnInit {
   @Input() application  : Applicatrion[];
   @Input() cv : CV;
   submitted = false;
+  aktywny = "aktywny";
+  nieaktywny = "nie aktywny";
 
   constructor(private router : Router, private userService: UserService, private empoyleeService : EmployeeService,
               private applicationService : ApplictionService, private acService : CVService) { }

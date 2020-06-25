@@ -21,6 +21,10 @@ export class ComapnyDetalisComponent implements OnInit {
   @Input() user: User;
   @Input() advertisement : Advertisement;
   submitted=false;
+  submitted1 = false;
+  submitted2 = false;
+  status = "Rozważana";
+  status2 = "Rozważana";
   @Input() application : Applicatrion[];
   constructor(private companyService : CompanyService, private router : Router, private addverService : AdvertisementService,
               private applicationService : ApplictionService) { }
@@ -64,5 +68,25 @@ export class ComapnyDetalisComponent implements OnInit {
         this.application = em);
   }
 
+  OnSubmity(){
+    if(this.submitted1 == false)
+      this.submitted1 = true;
+    else
+      this.submitted1 = false;
+  }
 
+  zmiana(){
+    this.status = "Skontaktowano się z kandydatem";
+  }
+
+  OnSubmity2(){
+    if(this.submitted2 == false)
+      this.submitted2 = true;
+    else
+      this.submitted2 = false;
+  }
+
+  zmiana2(){
+    this.status2 = "Skontaktowano się z kandydatem";
+  }
 }

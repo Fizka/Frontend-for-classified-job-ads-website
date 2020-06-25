@@ -1,7 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+ body{
+   background: lightgray;
+ }
+
 .list-group-item{
   cursor: pointer;
+}
+
+.lista{
+  list-style-type: none;
 }
 
 .input-label{
@@ -20,4 +29,71 @@
 .no-gutters {
   margin-right: 20px;
   margin-left: 20px;
+}
+
+
+#tresc {
+  border-radius: 5px;
+  padding: 20px;
+  background: whitesmoke;
+  min-height: 100px;
+  margin-bottom: 10px;
+  margin-left: 180px;
+  margin-right: 180px;
+  margin-top: 10px;
+  box-shadow: -5px -5px 15px black;
+}
+
+#pasekBoczny{
+  float: right;
+  width: 200px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-right: 30px;
+  padding: 0px 5px;
+}
+
+.form-control{
+  text-align: center;
+  width: 300px;
+  display: flex;
+}
+
+.form-group{
+  text-align: center;
+}
+
+.dane{
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h3{
+  text-align: center;
+  font-size: 42px;
+}
+
+.navbar{
+  padding: 0;
+  margin: 0;
+}
+
+#bar{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#stopka{
+  background: #333333;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  margin: 30px 10px 0px;
+  color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }

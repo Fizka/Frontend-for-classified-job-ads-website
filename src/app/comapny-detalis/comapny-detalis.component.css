@@ -1,0 +1,52 @@
+.lista{
+  list-style-type: none;
+}
+
+h3{
+  border: #333333 solid medium;
+}
+
+.dane{
+  background: dimgrey;
+  box-shadow: -5px -5px 15px black;
+  display: block;
+}
+
+#tresc{
+  display: block;
+}
+
+.danekonta{
+  background: dimgrey;
+  box-shadow: -5px -5px 15px black;
+  align-items: center;
+}
+
+.boxCompy{
+  margin: 20px;
+  padding: 10px;
+  background: whitesmoke;
+  box-shadow: -5px -5px 15px black;
+  align-items: center;
+  border-bottom:  groove;
+}
+
+.form-control{
+  width: 500px;
+}
+
+h3{
+  color: whitesmoke;
+}
+
+.boximg{
+  text-align: center;
+}
+
+.itemComp label{
+  text-shadow: black 2px 2px 4px;
+}
+
+.itemComp {
+  border-bottom:  groove;
+}

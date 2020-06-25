@@ -1,5 +1,41 @@
 # Modules for classified job ads website 
 
+## Technologies
+
+Angular CLI - TypeScript, HTML5, CSS3
+
+## functions:
+
+### Everyone can:
+ 
+- view job offers
+- view CV
+- log in 
+- create an account (for company or basic account)  
+- view statistics 
+- send feedback to admin 
+
+### Company can:
+
+- add job offers
+- check applications 
+- view account 
+- view their job offer 
+
+### Basic account can:
+
+- send application for job offer
+- create cv
+- advertise your cv 
+- view account 
+
+### Admin can: 
+
+- delete an account
+- block an account 
+- give someone a premium account 
+- view accounts 
+
 ![](/ogłoszenia.png)
 
 ## Accounts
@@ -8,25 +44,25 @@
 
 #### For Everyone(basic account)
  
-![](/Rejestracja.png)
+![](/rejestracja.jpg)
 
-![](/porejestracjipodstawowej.png)
+![](/po_rejestracji.jpg)
 
 #### For Company 
 
-![](/tworzeniekontafirmy.png)
+![](/po_rejestracji_customer_po.jpg)
 
-![](/kontofirmy.png)
+![](/konto_firma.jpg)
 
 #### For Customer 
 
-![](/tworzeniekontaklienta.png)
+![](/po_rejestracji_customer.jpg)
 
-![](/kontoklienta.png)
+![](/tworzeniekontaklienta.png)
 
 ### How to log in?
 
-![](/logowanie.png)
+![](/logowanie.jpg)
 
 ## Job ads 
 
@@ -34,7 +70,7 @@
 
 ## CV ads  
 
-![](/cv.png)
+![](/cv_tablica.jpg)
 
 ## How to create CV? 
 
@@ -46,11 +82,13 @@
 
 ## Messages
 
-![](/wiadomosci.png) 
+![](/wiadomosc.jpg) 
 
 ## Admin account 
 
-![](/admin.png)
+![](/admin.jpg)
+
+
 
 # SzukajPracyNgApp
 

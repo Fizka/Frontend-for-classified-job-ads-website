@@ -1,0 +1,16 @@
+#tresc{
+  padding-top: 30px ;
+}
+
+.dane{
+  padding-top: 30px;
+  background: #333333;
+  flex-flow: row wrap;
+}
+
+.cvelement{
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+}

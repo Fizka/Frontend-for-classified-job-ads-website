@@ -6,57 +6,46 @@
 <h3> Tworzenie pytania  </h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
-    <ul>
-      <li>
+
           <div >
             <label>Tytuł Ankiety : </label> {{survey.title}}
           </div>
-      </li>
-      <li>
+
           <div >
             <label >Liczba pytań: </label> {{survey.numberofquestions}}
           </div>
-      </li>
-      <li>
+
           <div >
             <label >Autor : </label> {{comapny.companyName}}
           </div>
-      </li>
-    </ul>
+
 
       <div [hidden]="submitted" >
         <ul>
              <label >Pytanie : </label>
           <li *ngFor="let questions of question">
               <h4>{{questions.title}} </h4>
-           <ul>
-              <li>
+          </li></ul>
                 <div>
                 <label><input type="checkbox" name="answerOne"> odp 1 </label>
                 </div>
-              </li>
-              <li>
+
                 <div>
                 <label><input type="checkbox" name="answerTwo"> odp 1 </label>
                 </div>
-              </li>
-              <li>
+
                 <div>
                 <label><input type="checkbox" name="answerThree"> odp 1 </label>
                 </div>
-              </li>
-              <li>
+
                 <div>
                 <label><input type="checkbox" name="answerCorrect"> odp 1 </label>
                 </div>
-              </li>
-           </ul>
-          </li>
-        </ul>
+
+
       </div>
-      <li>
         <button type="submit" class="btn btn-success">Wyślij</button>
-      </li>
+
 
   </form>
 </div>

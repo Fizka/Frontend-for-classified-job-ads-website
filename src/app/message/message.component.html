@@ -6,29 +6,24 @@
         <div class="col-md-8 text-center">
     <div *ngIf="message">
       <div>
-        <ul>
-          <li>
+
             <div>
               <label> OD : </label> {{message}}
             </div>
-          </li>
-          <li>
+
             <div>
               <label> Tytuł : </label> {{message}}
             </div>
-          </li>
-          <li>
+
             <div>
               <label> Treść : </label> {{message}}
             </div>
-          </li>
-          <li>
+
             <div class="form-group">
               <button type="button" class="btn btn-primary" (click)='Delete()'> Usuń </button>
               <button type="button" class="btn btn-primary" (click)='newMessage()'> Odpowiedz </button>
             </div>
-          </li>
-        </ul>
+
       </div>
     </div>
   </div>

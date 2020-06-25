@@ -1,13 +1,8 @@
-<div class="jumbotron no-gutters" >
-  <div class="container-fluid">
-    <div class="form-horizontal">
-    <div class="row">
-      <div class="col-md-9 text-center">
-        <h3>Ogłoszenia</h3>
-        <div class="col-md-offset-3 text-center">
-        </div>
+<div id="tresc" >
+
+  <div class="dane">
+        <h3> Ogłoszenia </h3>
           <div  style="padding-left: 100px; padding-right: 100px;">
-          <h5> Wyszukiwanie </h5>
               <div class="form-group" >
                 <label >Branża:  </label>
                 <br>
@@ -35,21 +30,12 @@
             </form>
 
           </div>
-
+  </div>
+<br/><br/>
         <nav class="navbar navbar-light" style="background-color: #333; padding-right:50px; ">
           <div  class="row row-no-gutters text-center" *ngFor="let advertisement of adverts5">
-            <ul> <li><app-advertisement-details [advertisement]='advertisement'></app-advertisement-details> </li> </ul>
+            <ul class="lista"> <li><app-advertisement-details [advertisement]='advertisement'></app-advertisement-details> </li> </ul>
           </div>
 
         </nav>
-      </div>
-      <div class="jumbotron" >
-          <div class="col-md-3">
-            <br>
-            <img  src="assets/businessman.png" class="img" width="172" height="172">
-          </div>
-        </div>
-    </div>
-</div>
-  </div>
 </div>

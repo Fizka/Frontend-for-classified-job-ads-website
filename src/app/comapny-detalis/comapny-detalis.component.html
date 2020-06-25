@@ -1,164 +1,182 @@
-<div class="jumbotron no-gutters" >
-  <div class="container-fluid">
-    <div class="form-horizontal">
-      <div class="row">
-        <div class="col-md-8 text-center">
-    <h2> Konto Użytkownika - Firma</h2>
-    <div *ngIf="user">
-      <h3> Dane Konta </h3>
-      <div>
-        <ul>
-          <li>
-            <div>
+<div id="tresc">
+  <div class="danekonta">
+    <h3>Konto Firmy</h3>
+    <hr>
+    <br/>
+    <div *ngIf="user" >
+      <div class="boximg">
+      <img src="assets/businessman.png" class="img" width="172" height="172">
+      </div>
+      <br/>
+      <hr>
+      <h3>Dane Konta</h3>
+      <div class="boxCompy">
+            <div class="itemComp">
               <label>Login : </label> {{user.login}}
               <input [hidden]="!submitted" type="text" class="form-control" id="login" required [(ngModel)]="user.login" name="login">
             </div>
-          </li>
-          <li>
-            <div>
+
+            <div class="itemComp">
               <label>Hasło : </label> {{user.password}}
               <input [hidden]="!submitted" type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
             </div>
-          </li>
-          <li>
-            <div>
+
+            <div class="itemComp">
               <label>E-mail : </label> {{user.mail}}
               <input [hidden]="!submitted" type="text" class="form-control" id="mail" required [(ngModel)]="user.mail" name="mail">
             </div>
-          </li>
-          <li>
-            <div>
-              <label>Aktywny : </label> {{user.active}}
+
+            <div class="itemComp">
+              <label>Blokada użytkownika : </label>
+              <ng-template [ngIf]="user.active" [ngIfElse]="elseBlock" > Zablokowany </ng-template>
+              <ng-template #elseBlock> Aktywny </ng-template>
             </div>
-          </li>
-          <li>
-            <div>
-              <label>Typ użytkownika : </label> {{user.usertype}}
+
+            <div class="itemComp">
+              <label>Typ użytkownika : </label>
+              <ng-template [ngIf]="user.usertype==1" [ngIfElse]="elseBlock2" > Premium </ng-template>
+              <ng-template #elseBlock2> Podstawowy  </ng-template>
             </div>
-          </li>
-        </ul>
       </div>
+      <hr>
     </div>
 
     <div *ngIf="company">
-      <h3> Dane Firmy </h3>
-  <div>
-    <ul>
-      <li>
-        <div>
-          <label> NIP : </label> {{company.nip}}
+     <div class="ramka"> <h3>Dane Firmy</h3></div>
+    <div class="boxCompy">
+        <div class="itemComp">
+          <label > NIP : </label> {{company.nip}}
         </div>
-      </li>
-      <li>
-        <div>
+
+
+        <div class="itemComp">
           <label>Nazwa : </label> {{company.companyName}}
         </div>
-    </li>
-      <li>
-        <div>
+
+        <div class="itemComp">
           <label>Szczególy adresu : </label> {{company.address}}
         </div>
-    </li>
-      <li>
-        <div>
+
+        <div class="itemComp">
           <label>Miasto : </label> {{company.city}}
         </div>
-    </li>
-      <li>
-        <div>
+
+        <div class="itemComp">
           <label>Kod Pocztowy : </label> {{company.postalcode}}
         </div>
-    </li>
-      <li>
-        <div>
+
+        <div class="itemComp">
           <label>mail : </label> {{company.mail}}
         </div>
-    </li>
-      <li>
-        <div>
-          <label>REGON : </label> {{company.REGON}}
-        </div>
-    </li>
-      <li>
-        <div>
-          <label>KRS : </label> {{company.KRS}}
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
 
+        <div class="itemComp">
+          <label>REGON : </label> 4354352 {{company.REGON}}
+        </div>
+
+        <div class="itemComp">
+          <label>KRS : </label> 2343243 {{company.KRS}}
+        </div>
+  </div>
+      <hr>
+</div>
     <div *ngIf="advertisement">
       <h3> Ogłoszenie </h3>
-      <div>
-        <ul>
-          <li>
-            <div>
+      <div class="boxCompy">
+            <div class="itemComp">
               <label>Tytuł : </label> {{advertisement.title}}
             </div>
-          </li>
-          <li>
-            <div>
+
+            <div class="itemComp">
               <label>Branża : </label> {{advertisement.industry}}
             </div>
-          </li>
-          <li>
-            <div>
+
+            <div class="itemComp">
               <label>Miasto : </label> {{advertisement.city}}
             </div>
-          </li>
-          <li>
-            <div>
+
+            <div class="itemComp">
               <label>Pensja : </label> {{advertisement.salary}}
             </div>
-          </li>
-          <li>
-            <div>
+
+            <div class="itemComp">
               <label>Firma : </label> {{advertisement.company}}
             </div>
-          </li>
-          <li>
-            <div>
+
+            <div class="itemComp">
               <label>Dodano : </label> {{advertisement.dateAdded}}
             </div>
-          <li>
-          </li>
-          <div>
+
+          <div class="itemComp">
             <label>Data wygaśnięcia : </label> {{advertisement.periodOfValidity}}
           </div>
-          <li>
-          </li>
-          <div>
+
+          <div class="itemComp">
             <label>Typ umowy : </label> {{advertisement.contractType}}
           </div>
-        </ul>
+      </div>
+      <hr>
+      <br/>
+<div *ngIf="!submitted1">
+  <br/>
+          <h3> Odpowiedzi na zgłoszenia </h3> <br/>
+          <label>Numer aplikacji</label> 7 <br/>
+          <label>Status</label> {{this.status}}  <br/>
+          <button type="update" class="btn btn-primary" (click)='zmiana()'> Zmien status </button> <br/>
+          <button type="update" class="btn btn-primary"  (click)='OnSubmity()'> Usun </button> <br/>
+          <label>Imie </label> Kasia <br/>
+          <label>Naziwsko </label> Piekarek <br/>
+           <a href="mailto:kasia.piekarska@wp.pl">Napisz do kandydata</a> <br/>
+          <label> Tresc zgloszenia</label> <br/>
+          <p>
+            Szanowni Państwo, <br/>
+            nazwiązując do ogłoszenia o pracę w waszej firmie, chciałbym zglosić swoją kandydature. Dziękuje za poświcony czas.<br/>
+            Pozdrawiam, <br/>
+            Kasia Piekarek <br/>
+          </p>
+  <br/>
+  <hr style="width: 60%;">
+</div>
+      <br/>
+      <div *ngIf="!submitted2">
+        <label>Numer aplikacji</label> 8 <br/>
+        <label>Status</label> {{this.status2}}  <br/>
+        <button type="update" class="btn btn-primary" (click)='zmiana2()'> Zmien status </button> <br/>
+        <button type="update" class="btn btn-primary"  (click)='OnSubmity2()'> Usun </button> <br/>
+        <label>Imie :</label> Adam <br/>
+        <label>Naziwsko : </label> Wizowski <br/>
+       <a href="mailto:adam.wizowski@wp.pl">Napisz do kandydata</a> <br/>
+        <label> Tresc zgloszenia</label> <br/>
+        <p>
+          Szanowni Państwo, <br/>
+          nazwiązując do ogłoszenia o pracę w waszej firmie, chciałbym zglosić swoją kandydature. Dziękuje za poświcony czas.<br/>
+          Pozdrawiam, <br/>
+          Adam Wizowski <br/>
+        </p>
       </div>
     </div>
-          <h3> Odpowiedzi na zgłoszenia </h3>
           <div *ngFor="let application of application">
-            <ul>
-              <li>
+
                 <div>
                   <div class="form-group">
                     <label >Dane: </label>{{application.address}}
                   </div>
                 </div>
-              </li>
-              <li>
+
                 <div>
                   <div class="form-group">
                     <label >Mail: </label>{{application.mail}}
                   </div>
                 </div>
-              </li>
-            </ul>
+
           </div>
+          <br/>
           <div class="form-group">
-            <button type="update" class="btn btn-primary"  *ngIf="!submitted" (click)='OnSubmit()'> Pokaz Ogłoszenie i zgłoszenia </button>
+            <button type="update" class="btn btn-primary"  *ngIf="!submitted" (click)='OnSubmit()'> Pokaz Ogłoszenie i zgłoszenia </button> <br/> <br/>
+            <button class="btn btn-primary" (click)="DodajOgloszenie()"  > Dodaj Ogłoszenie  </button>
+            <br/>
           </div>
-    <button class="btn btn-primary" (click)="DodajOgloszenie()"  > Dodaj Ogłoszenie  </button>
+    <br/>
 </div>
 </div>
-    </div>
-  </div>
-</div>
+
+

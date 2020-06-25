@@ -1,55 +1,47 @@
-<div class="jumbotron no-gutters" >
-  <div class="container-fluid">
-    <div class="form-horizontal">
-      <div class="row">
-        <div class="col-md-8 text-center">
+<div id="tresc">
+  <div class="dane">
 <h3> Tworzenie pytania  </h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
-    <ul>
-      <li>
+
         <div>
           <div class="form-group">
             <label for="question">Pytanie: </label>
             <input type="text" class="form-control" id="question" required [(ngModel)]="question" name="question">
           </div>
         </div>
-      </li>
-      <li>
+
         <div>
           <div class="form-group">
             <label for="lastName">Odpowiedz prawidłowa: </label>
             <input type="text" class="form-control" id="lastName" required [(ngModel)]="question.answerCorrect" name="lastName">
           </div>
         </div>
-      </li>
-      <li>
+
         <div>
           <div class="form-group">
             <label for="mail">Odpowiedz druga: </label>
             <input type="text" class="form-control" id="mail" required [(ngModel)]="question.answerOne" name="mail">
           </div>
         </div>
-      </li>
-      <li>
+
         <div>
           <div class="form-group">
             <label for="phoneNumber">Odpowiedz Trzecia: </label>
             <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="question.answerTwo" name="phoneNumber">
           </div>
         </div>
-      </li>
-      <li>
+
         <div>
           <div class="form-group">
             <label for="address">Odpowiedz Czwarta: </label>
             <input type="text" class="form-control" id="address" required [(ngModel)]="question.answerThree" name="address">
           </div>
         </div>
-      </li>
+
 
       <button type="submit" class="btn btn-success" (click)="createQuestion()"> Dodaj </button>
-    </ul>
+
   </form>
 </div>
 
@@ -58,13 +50,5 @@
   <button class="btn btn-primary" (click)="GoToKonto()" > Zakończ  </button>
 </div>
   </div>
-      <div class="jumbotron" >
-        <div class="col-md-2">
-          <br>
-          <img src="assets/businessman.png" class="img" width="172" height="172">
-        </div>
-      </div>
     </div>
-    </div>
-  </div>
-</div>
+

@@ -14,6 +14,7 @@ export class MailSenderComponent implements OnInit {
 
   me : mess;
   submitted = false;
+  submitted2 = true;
   message: Message = new Message();
 
   constructor(private dataService: MessageService, private  messService : MessService) { }
@@ -25,6 +26,7 @@ export class MailSenderComponent implements OnInit {
   //czyszczenie
   newMessage(): void {
     this.submitted = false;
+    this.submitted2  = false;
     this.me = new mess();
   }
 
@@ -42,6 +44,7 @@ export class MailSenderComponent implements OnInit {
 
   //zapis
   onSubmit() {
+    this.submitted2 = false;
     this.sendFeedback();
   }
 
