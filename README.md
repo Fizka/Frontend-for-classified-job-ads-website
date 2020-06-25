@@ -2,7 +2,7 @@
 
 ## Technologies
 
-Angular CLI - TypeScript, HTML5, CSS3
+Angular CLI - TypeScript, HTML5, CSS3, bootstrap 
 
 ## functions:
 
@@ -11,7 +11,7 @@ Angular CLI - TypeScript, HTML5, CSS3
 - view job offers
 - view CV
 - log in 
-- create an account (for company or basic account)  
+- create an account (basic and company account or basic and customer account)  
 - view statistics 
 - send feedback to admin 
 
@@ -42,9 +42,11 @@ Angular CLI - TypeScript, HTML5, CSS3
 
 ### How to create an Account? 
 
-#### For Everyone(basic account)
+#### For Everyone (basic account)
  
 ![](/rejestracja.jpg)
+
+##### Account selection
 
 ![](/po_rejestracji.jpg)
 
@@ -52,11 +54,19 @@ Angular CLI - TypeScript, HTML5, CSS3
 
 ![](/po_rejestracji_customer_po.jpg)
 
+##### view account 
+
 ![](/konto_firma.jpg)
+
+##### job offer
+
+![](/konto_firma_4.jpg.jpg)
 
 #### For Customer 
 
 ![](/po_rejestracji_customer.jpg)
+
+##### view account 
 
 ![](/tworzeniekontaklienta.png)
 
