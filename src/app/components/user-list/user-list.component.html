@@ -1,0 +1,17 @@
+<div id="tresc">
+  <div class="dane">
+    <h3>Użytkownik</h3>
+    <nav class="navbar navbar-light" style="background-color: #333; padding-right:50px; ">
+      <div class="row row-no-gutters text-center" *ngFor="let user of users | async">
+        <ul class="lista">
+          <li>
+            <app-user-details [user]='user'></app-user-details>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <button type="button" class="button btn-danger" (click)='deleteUser()'>Usuń wszytskich</button>
+    </div>
+  </div>
+</div>

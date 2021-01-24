@@ -1,0 +1,55 @@
+<div id="tresc">
+  <div class="dane">
+    <h3> Tworzenie apliakcji </h3>
+    <div [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="onSubmit()">
+
+        <div>
+          <div class="form-group">
+            <label for="firstName">Nazwa Firmy: </label>
+            <input type="text" class="form-control" id="firstName" required [(ngModel)]="application.firstName"
+                   name="firstName">
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label for="lastName">Miasto: </label>
+            <input type="text" class="form-control" id="lastName" required [(ngModel)]="application.lastName"
+                   name="lastName">
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label for="mail">Szczegóły adresu: </label>
+            <input type="text" class="form-control" id="mail" required [(ngModel)]="application.mail" name="mail">
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label for="phoneNumber">Mail Firmy: </label>
+            <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="application.phoneNumber"
+                   name="phoneNumber">
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label for="address">Kod Pocztowy: </label>
+            <input type="text" class="form-control" id="address" required [(ngModel)]="application.address"
+                   name="address">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Wyślij</button>
+
+      </form>
+    </div>
+    <div [hidden]="!submitted">
+      <h4>Dodawanie zakończone pomyślnie!</h4>
+      <button class="btn btn-primary" (click)="ToKonto()"> Konto</button>
+    </div>
+  </div>
+</div>

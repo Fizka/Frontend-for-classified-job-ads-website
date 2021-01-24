@@ -1,0 +1,12 @@
+#nav {
+  margin: 1%;
+}
+
+li {
+  display: inline;
+  padding: 0.5em;
+}
+
+#nav {
+  padding: 0.5em 0;
+}

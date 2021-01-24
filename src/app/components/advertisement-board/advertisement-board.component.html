@@ -1,0 +1,45 @@
+<div id="tresc">
+  <div class="dane">
+    <h3> Ogłoszenia </h3>
+    <div style="padding-left: 100px; padding-right: 100px;">
+      <div class="form-group">
+        <label>Branża: </label>
+        <br>
+        <div class="btn-group">
+          <div class="row no-gutters text-center">
+            <button type="submit" class="btn btn-primary" id="budo" (click)="IndustryBudownictwo()" name="budo">
+              Budownictwo
+            </button>
+            <button type="submit" class="btn btn-primary" id="iy" (click)="IndustryIT()" name="iy"> IT</button>
+            <button type="submit" class="btn btn-primary" id="prawo" (click)="IndustryPrawo()" name="prawo"> Prawo
+            </button>
+            <button type="submit" class="btn btn-primary" id="fina" (click)="IndustryFinanse()" name="fina"> Finanse
+            </button>
+          </div>
+        </div>
+      </div>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group" style="left: 50%; right: 50%;">
+          <label for="salary"> Pensja od: </label>
+          <input type="text" name="salary" id="salary" class="form-control" required [(ngModel)]="salary">
+          <label for="city"> Miasto: </label>
+          <input type="text" name="city" id="city" class="form-control" required [(ngModel)]="city">
+        </div>
+        <div class="btn-group">
+          <button type="submit" class="btn btn-primary"> Szukaj</button>
+        </div>
+        <br>
+      </form>
+    </div>
+  </div>
+  <br/><br/>
+  <nav class="navbar navbar-light" style="background-color: #333; padding-right:50px; ">
+    <div class="row row-no-gutters text-center" *ngFor="let advertisementaa of adverts5">
+      <ul class="lista">
+        <li>
+          <app-advertisement-details [advertisement]='advertisementaa'></app-advertisement-details>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

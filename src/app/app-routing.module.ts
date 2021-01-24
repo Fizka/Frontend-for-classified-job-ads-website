@@ -1,27 +1,28 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {UserListComponent} from "./user-list/user-list.component";
-import {CreateUserComponent} from "./create-user/create-user.component";
-import {SearchUserComponent} from "./search-user/search-user.component";
-import {UserSignInComponent} from "./user-sign-in/user-sign-in.component";
-import {CreateAdvertisementComponent} from "./create-advertisement/create-advertisement.component";
-import {AdvertisementBoardComponent} from "./advertisement-board/advertisement-board.component";
-import {EmployeeComponent} from "./employee/employee.component";
-import {MailSenderComponent} from "./mail-sender/mail-sender.component";
-import {ComapnyDetalisComponent} from "./comapny-detalis/comapny-detalis.component";
-import {LogoutComponent} from "./logout/logout.component";
-import {CreateAccountCompanyComponent} from "./create-account-company/create-account-company.component";
-import {CreateAccountCustomerComponent} from "./create-account-customer/create-account-customer.component";
-import {StatisticsComponent} from "./statistics/statistics.component";
-import {CreateCvComponent} from "./create-cv/create-cv.component";
-import {CvComponent} from "./cv/cv.component";
-import {MailboxComponent} from "./mailbox/mailbox.component";
-import {CreateAppliacationComponent} from "./create-appliacation/create-appliacation.component";
-import {SurveyApplicationComponent} from "./survey-application/survey-application.component";
-import {CreateSurveyComponent} from "./create-survey/create-survey.component";
-import {CreateCourseCertificateComponent} from "./create-course-certificate/create-course-certificate.component";
-import {SearchComponent} from "./search/search.component";
-import {CvBoardComponent} from "./cv-board/cv-board.component";
+import {UserListComponent} from "./components/user-list/user-list.component";
+import {CreateUserComponent} from "./components/create-user/create-user.component";
+import {SearchUserComponent} from "./components/search-user/search-user.component";
+import {UserSignInComponent} from "./components/user-sign-in/user-sign-in.component";
+import {CreateAdvertisementComponent} from "./components/create-advertisement/create-advertisement.component";
+import {AdvertisementBoardComponent} from "./components/advertisement-board/advertisement-board.component";
+import {CreateCvComponent} from "./components/create-cv/create-cv.component";
+import {MailboxComponent} from "./components/mailbox/mailbox.component";
+import {SurveyApplicationComponent} from "./components/survey-application/survey-application.component";
+import {CreateCourseCertificateComponent} from "./components/create-course-certificate/create-course-certificate.component";
+import {SearchComponent} from "./components/search/search.component";
+import {CvBoardComponent} from "./components/cv-board/cv-board.component";
+import {LogoutComponent} from "./components/logout/logout.component";
+import {CreateSurveyComponent} from "./components/create-survey/create-survey.component";
+import {CreateAppliacationComponent} from "./components/create-appliacation/create-appliacation.component";
+import {CvComponent} from "./components/cv/cv.component";
+import {StatisticsComponent} from "./components/statistics/statistics.component";
+import {CreateAccountCustomerComponent} from "./components/create-account-customer/create-account-customer.component";
+import {CreateAccountCompanyComponent} from "./components/create-account-company/create-account-company.component";
+import {MailSenderComponent} from "./components/mail-sender/mail-sender.component";
+import {ComapnyDetalisComponent} from "./components/comapny-detalis/comapny-detalis.component";
+import {EmployeeComponent} from "./components/employee/employee.component";
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'user', pathMatch: 'full' },
